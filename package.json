@@ -1,0 +1,20 @@
+{
+  "author": "Kirill Kuznetsov",
+  "description": "A PureScript wrapper for Vitest",
+  "license": "MIT",
+  "name": "purescript-vitest",
+  "repository": "git@github.com:miuirussia/purescript-vitest.git",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "spago build",
+    "test": "spago build && NODE_OPTIONS=--experimental-vm-modules vitest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "2.2.0",
+    "purescript": "0.15.6",
+    "purs-tidy": "0.9.2",
+    "spago": "0.20.9",
+    "vitest": "0.24.5"
+  }
+}
