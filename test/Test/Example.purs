@@ -5,7 +5,7 @@ import Prelude
 import Data.Foldable (for_)
 import Effect (Effect)
 import Example (sum, mkPoint, asyncSum)
-import Vitest (describe, expectToEqual, test)
+import Vitest (describe, expectToEqual, expectToMatchSnapshot, test)
 
 tests :: Effect Unit
 tests = do
@@ -22,3 +22,8 @@ tests = do
     test "asyncSum" $ do
       v <- asyncSum 1 2
       expectToEqual v 3
+
+  describe "test Example module3" $ do
+    test "matchSnapshot" $ do
+      v <- asyncSum 1 2
+      expectToMatchSnapshot v
